@@ -3,24 +3,52 @@
   "WorkspaceRootPath": "C:\\Users\\Julo\\Desktop\\WSEI\\S3\\ASP NET\\Library\\",
   "Documents": [
     {
-      "AbsoluteMoniker": "D:0:0:{6FAE6E4E-2F3B-4513-80B8-CD02CB648C22}|Library.csproj|c:\\users\\julo\\desktop\\wsei\\s3\\asp net\\library\\views\\shared\\_layout.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
-      "RelativeMoniker": "D:0:0:{6FAE6E4E-2F3B-4513-80B8-CD02CB648C22}|Library.csproj|solutionrelative:views\\shared\\_layout.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+      "AbsoluteMoniker": "D:0:0:{6FAE6E4E-2F3B-4513-80B8-CD02CB648C22}|Library.csproj|c:\\users\\julo\\desktop\\wsei\\s3\\asp net\\library\\views\\loans\\create.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{6FAE6E4E-2F3B-4513-80B8-CD02CB648C22}|Library.csproj|solutionrelative:views\\loans\\create.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|C:\\Users\\Julo\\Desktop\\WSEI\\S3\\ASP NET\\Library\\Migrations\\20250106173750_addBook.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|solutionrelative:Migrations\\20250106173750_addBook.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{6FAE6E4E-2F3B-4513-80B8-CD02CB648C22}|Library.csproj|c:\\users\\julo\\desktop\\wsei\\s3\\asp net\\library\\views\\books\\create.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{6FAE6E4E-2F3B-4513-80B8-CD02CB648C22}|Library.csproj|solutionrelative:views\\books\\create.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{6FAE6E4E-2F3B-4513-80B8-CD02CB648C22}|Library.csproj|c:\\users\\julo\\desktop\\wsei\\s3\\asp net\\library\\controllers\\bookscontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{6FAE6E4E-2F3B-4513-80B8-CD02CB648C22}|Library.csproj|solutionrelative:controllers\\bookscontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|C:\\Users\\Julo\\Desktop\\WSEI\\S3\\ASP NET\\Library\\Migrations\\20250107163244_dbContextRelations.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|solutionrelative:Migrations\\20250107163244_dbContextRelations.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{6FAE6E4E-2F3B-4513-80B8-CD02CB648C22}|Library.csproj|c:\\users\\julo\\desktop\\wsei\\s3\\asp net\\library\\views\\books\\index.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{6FAE6E4E-2F3B-4513-80B8-CD02CB648C22}|Library.csproj|solutionrelative:views\\books\\index.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{6FAE6E4E-2F3B-4513-80B8-CD02CB648C22}|Library.csproj|c:\\users\\julo\\desktop\\wsei\\s3\\asp net\\library\\views\\books\\edit.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{6FAE6E4E-2F3B-4513-80B8-CD02CB648C22}|Library.csproj|solutionrelative:views\\books\\edit.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{6FAE6E4E-2F3B-4513-80B8-CD02CB648C22}|Library.csproj|c:\\users\\julo\\desktop\\wsei\\s3\\asp net\\library\\views\\books\\details.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{6FAE6E4E-2F3B-4513-80B8-CD02CB648C22}|Library.csproj|solutionrelative:views\\books\\details.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{6FAE6E4E-2F3B-4513-80B8-CD02CB648C22}|Library.csproj|c:\\users\\julo\\desktop\\wsei\\s3\\asp net\\library\\views\\books\\delete.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{6FAE6E4E-2F3B-4513-80B8-CD02CB648C22}|Library.csproj|solutionrelative:views\\books\\delete.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{6FAE6E4E-2F3B-4513-80B8-CD02CB648C22}|Library.csproj|c:\\users\\julo\\desktop\\wsei\\s3\\asp net\\library\\models\\book.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{6FAE6E4E-2F3B-4513-80B8-CD02CB648C22}|Library.csproj|solutionrelative:models\\book.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|C:\\Users\\Julo\\Desktop\\WSEI\\S3\\ASP NET\\Library\\Migrations\\20250106173503_initial.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|solutionrelative:Migrations\\20250106173503_initial.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{6FAE6E4E-2F3B-4513-80B8-CD02CB648C22}|Library.csproj|c:\\users\\julo\\desktop\\wsei\\s3\\asp net\\library\\areas\\identity\\data\\applicationcontext.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{6FAE6E4E-2F3B-4513-80B8-CD02CB648C22}|Library.csproj|solutionrelative:areas\\identity\\data\\applicationcontext.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{6FAE6E4E-2F3B-4513-80B8-CD02CB648C22}|Library.csproj|c:\\users\\julo\\desktop\\wsei\\s3\\asp net\\library\\areas\\identity\\data\\user.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{6FAE6E4E-2F3B-4513-80B8-CD02CB648C22}|Library.csproj|solutionrelative:areas\\identity\\data\\user.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{6FAE6E4E-2F3B-4513-80B8-CD02CB648C22}|Library.csproj|c:\\users\\julo\\desktop\\wsei\\s3\\asp net\\library\\controllers\\loanscontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{6FAE6E4E-2F3B-4513-80B8-CD02CB648C22}|Library.csproj|solutionrelative:controllers\\loanscontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{6FAE6E4E-2F3B-4513-80B8-CD02CB648C22}|Library.csproj|c:\\users\\julo\\desktop\\wsei\\s3\\asp net\\library\\views\\shared\\_layout.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{6FAE6E4E-2F3B-4513-80B8-CD02CB648C22}|Library.csproj|solutionrelative:views\\shared\\_layout.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{6FAE6E4E-2F3B-4513-80B8-CD02CB648C22}|Library.csproj|c:\\users\\julo\\desktop\\wsei\\s3\\asp net\\library\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
@@ -29,6 +57,10 @@
     {
       "AbsoluteMoniker": "D:0:0:{6FAE6E4E-2F3B-4513-80B8-CD02CB648C22}|Library.csproj|c:\\users\\julo\\desktop\\wsei\\s3\\asp net\\library\\scaffoldingreadme.txt||{8B382828-6202-11D1-8870-0000F87579D2}",
       "RelativeMoniker": "D:0:0:{6FAE6E4E-2F3B-4513-80B8-CD02CB648C22}|Library.csproj|solutionrelative:scaffoldingreadme.txt||{8B382828-6202-11D1-8870-0000F87579D2}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{6FAE6E4E-2F3B-4513-80B8-CD02CB648C22}|Library.csproj|c:\\users\\julo\\desktop\\wsei\\s3\\asp net\\library\\migrations\\20250106173503_initial.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{6FAE6E4E-2F3B-4513-80B8-CD02CB648C22}|Library.csproj|solutionrelative:migrations\\20250106173503_initial.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     }
   ],
   "DocumentGroupContainers": [
@@ -38,50 +70,154 @@
       "DocumentGroups": [
         {
           "DockedWidth": 200,
-          "SelectedChildIndex": 4,
+          "SelectedChildIndex": 7,
           "Children": [
             {
               "$type": "Document",
-              "DocumentIndex": 1,
-              "Title": "20250106173750_addBook.cs",
-              "DocumentMoniker": "C:\\Users\\Julo\\Desktop\\WSEI\\S3\\ASP NET\\Library\\Migrations\\20250106173750_addBook.cs",
-              "RelativeDocumentMoniker": "Migrations\\20250106173750_addBook.cs",
-              "ToolTip": "C:\\Users\\Julo\\Desktop\\WSEI\\S3\\ASP NET\\Library\\Migrations\\20250106173750_addBook.cs",
-              "RelativeToolTip": "Migrations\\20250106173750_addBook.cs",
+              "DocumentIndex": 2,
+              "Title": "20250107163244_dbContextRelations.cs",
+              "DocumentMoniker": "C:\\Users\\Julo\\Desktop\\WSEI\\S3\\ASP NET\\Library\\Migrations\\20250107163244_dbContextRelations.cs",
+              "RelativeDocumentMoniker": "Migrations\\20250107163244_dbContextRelations.cs",
+              "ToolTip": "C:\\Users\\Julo\\Desktop\\WSEI\\S3\\ASP NET\\Library\\Migrations\\20250107163244_dbContextRelations.cs",
+              "RelativeToolTip": "Migrations\\20250107163244_dbContextRelations.cs",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-01-06T17:37:50.639Z",
+              "WhenOpened": "2025-01-07T16:32:44.569Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 2,
-              "Title": "BooksController.cs",
-              "DocumentMoniker": "C:\\Users\\Julo\\Desktop\\WSEI\\S3\\ASP NET\\Library\\Controllers\\BooksController.cs",
-              "RelativeDocumentMoniker": "Controllers\\BooksController.cs",
-              "ToolTip": "C:\\Users\\Julo\\Desktop\\WSEI\\S3\\ASP NET\\Library\\Controllers\\BooksController.cs",
-              "RelativeToolTip": "Controllers\\BooksController.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAA4AAAA1AAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-01-06T17:37:13.501Z",
+              "DocumentIndex": 4,
+              "Title": "Edit.cshtml",
+              "DocumentMoniker": "C:\\Users\\Julo\\Desktop\\WSEI\\S3\\ASP NET\\Library\\Views\\Books\\Edit.cshtml",
+              "RelativeDocumentMoniker": "Views\\Books\\Edit.cshtml",
+              "ToolTip": "C:\\Users\\Julo\\Desktop\\WSEI\\S3\\ASP NET\\Library\\Views\\Books\\Edit.cshtml",
+              "RelativeToolTip": "Views\\Books\\Edit.cshtml",
+              "ViewState": "AgIAAAwAAAAAAAAAAAAAABgAAAASAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2025-01-07T16:31:49.856Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 5,
+              "Title": "Details.cshtml",
+              "DocumentMoniker": "C:\\Users\\Julo\\Desktop\\WSEI\\S3\\ASP NET\\Library\\Views\\Books\\Details.cshtml",
+              "RelativeDocumentMoniker": "Views\\Books\\Details.cshtml",
+              "ToolTip": "C:\\Users\\Julo\\Desktop\\WSEI\\S3\\ASP NET\\Library\\Views\\Books\\Details.cshtml",
+              "RelativeToolTip": "Views\\Books\\Details.cshtml",
+              "ViewState": "AgIAAAkAAAAAAAAAAAAAABcAAAANAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2025-01-07T16:31:41.471Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 1,
+              "Title": "Create.cshtml",
+              "DocumentMoniker": "C:\\Users\\Julo\\Desktop\\WSEI\\S3\\ASP NET\\Library\\Views\\Books\\Create.cshtml",
+              "RelativeDocumentMoniker": "Views\\Books\\Create.cshtml",
+              "ToolTip": "C:\\Users\\Julo\\Desktop\\WSEI\\S3\\ASP NET\\Library\\Views\\Books\\Create.cshtml",
+              "RelativeToolTip": "Views\\Books\\Create.cshtml",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAABgAAAAkAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2025-01-07T16:31:16.177Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
               "DocumentIndex": 3,
+              "Title": "Index.cshtml",
+              "DocumentMoniker": "C:\\Users\\Julo\\Desktop\\WSEI\\S3\\ASP NET\\Library\\Views\\Books\\Index.cshtml",
+              "RelativeDocumentMoniker": "Views\\Books\\Index.cshtml",
+              "ToolTip": "C:\\Users\\Julo\\Desktop\\WSEI\\S3\\ASP NET\\Library\\Views\\Books\\Index.cshtml",
+              "RelativeToolTip": "Views\\Books\\Index.cshtml",
+              "ViewState": "AgIAAA8AAAAAAAAAAAAAABQAAAAVAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2025-01-07T16:30:36.1Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 6,
+              "Title": "Delete.cshtml",
+              "DocumentMoniker": "C:\\Users\\Julo\\Desktop\\WSEI\\S3\\ASP NET\\Library\\Views\\Books\\Delete.cshtml",
+              "RelativeDocumentMoniker": "Views\\Books\\Delete.cshtml",
+              "ToolTip": "C:\\Users\\Julo\\Desktop\\WSEI\\S3\\ASP NET\\Library\\Views\\Books\\Delete.cshtml",
+              "RelativeToolTip": "Views\\Books\\Delete.cshtml",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAABgAAAANAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2025-01-07T16:30:05.033Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 9,
+              "Title": "User.cs",
+              "DocumentMoniker": "C:\\Users\\Julo\\Desktop\\WSEI\\S3\\ASP NET\\Library\\Areas\\Identity\\Data\\User.cs",
+              "RelativeDocumentMoniker": "Areas\\Identity\\Data\\User.cs",
+              "ToolTip": "C:\\Users\\Julo\\Desktop\\WSEI\\S3\\ASP NET\\Library\\Areas\\Identity\\Data\\User.cs",
+              "RelativeToolTip": "Areas\\Identity\\Data\\User.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAwAAAAqAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-01-07T16:24:50.482Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 0,
+              "Title": "Create.cshtml",
+              "DocumentMoniker": "C:\\Users\\Julo\\Desktop\\WSEI\\S3\\ASP NET\\Library\\Views\\Loans\\Create.cshtml",
+              "RelativeDocumentMoniker": "Views\\Loans\\Create.cshtml",
+              "ToolTip": "C:\\Users\\Julo\\Desktop\\WSEI\\S3\\ASP NET\\Library\\Views\\Loans\\Create.cshtml",
+              "RelativeToolTip": "Views\\Loans\\Create.cshtml",
+              "ViewState": "AgIAAAYAAAAAAAAAAAAAAAoAAAARAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2025-01-07T14:32:36.965Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 8,
+              "Title": "ApplicationContext.cs",
+              "DocumentMoniker": "C:\\Users\\Julo\\Desktop\\WSEI\\S3\\ASP NET\\Library\\Areas\\Identity\\Data\\ApplicationContext.cs",
+              "RelativeDocumentMoniker": "Areas\\Identity\\Data\\ApplicationContext.cs",
+              "ToolTip": "C:\\Users\\Julo\\Desktop\\WSEI\\S3\\ASP NET\\Library\\Areas\\Identity\\Data\\ApplicationContext.cs",
+              "RelativeToolTip": "Areas\\Identity\\Data\\ApplicationContext.cs",
+              "ViewState": "AgIAAAcAAAAAAAAAAIAzwB0AAAAjAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-01-07T15:28:01.876Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 10,
+              "Title": "LoansController.cs",
+              "DocumentMoniker": "C:\\Users\\Julo\\Desktop\\WSEI\\S3\\ASP NET\\Library\\Controllers\\LoansController.cs",
+              "RelativeDocumentMoniker": "Controllers\\LoansController.cs",
+              "ToolTip": "C:\\Users\\Julo\\Desktop\\WSEI\\S3\\ASP NET\\Library\\Controllers\\LoansController.cs",
+              "RelativeToolTip": "Controllers\\LoansController.cs",
+              "ViewState": "AgIAABMAAAAAAAAAAAAAADYAAAAYAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-01-07T14:28:33.358Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 7,
               "Title": "Book.cs",
               "DocumentMoniker": "C:\\Users\\Julo\\Desktop\\WSEI\\S3\\ASP NET\\Library\\Models\\Book.cs",
               "RelativeDocumentMoniker": "Models\\Book.cs",
               "ToolTip": "C:\\Users\\Julo\\Desktop\\WSEI\\S3\\ASP NET\\Library\\Models\\Book.cs",
               "RelativeToolTip": "Models\\Book.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAoAAAAtAAAAAAAAAA==",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAA4AAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2025-01-06T17:35:58.359Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 4,
+              "DocumentIndex": 14,
               "Title": "20250106173503_initial.cs",
               "DocumentMoniker": "C:\\Users\\Julo\\Desktop\\WSEI\\S3\\ASP NET\\Library\\Migrations\\20250106173503_initial.cs",
               "RelativeDocumentMoniker": "Migrations\\20250106173503_initial.cs",
@@ -94,20 +230,20 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 0,
+              "DocumentIndex": 11,
               "Title": "_Layout.cshtml",
               "DocumentMoniker": "C:\\Users\\Julo\\Desktop\\WSEI\\S3\\ASP NET\\Library\\Views\\Shared\\_Layout.cshtml",
               "RelativeDocumentMoniker": "Views\\Shared\\_Layout.cshtml",
               "ToolTip": "C:\\Users\\Julo\\Desktop\\WSEI\\S3\\ASP NET\\Library\\Views\\Shared\\_Layout.cshtml",
               "RelativeToolTip": "Views\\Shared\\_Layout.cshtml",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAB0AAABbAAAAAAAAAA==",
+              "ViewState": "AgIAAAYAAAAAAAAAAAAAACAAAAB5AAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
               "WhenOpened": "2025-01-06T17:33:30.195Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 5,
+              "DocumentIndex": 12,
               "Title": "Program.cs",
               "DocumentMoniker": "C:\\Users\\Julo\\Desktop\\WSEI\\S3\\ASP NET\\Library\\Program.cs",
               "RelativeDocumentMoniker": "Program.cs",
@@ -120,7 +256,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 6,
+              "DocumentIndex": 13,
               "Title": "ScaffoldingReadMe.txt",
               "DocumentMoniker": "C:\\Users\\Julo\\Desktop\\WSEI\\S3\\ASP NET\\Library\\ScaffoldingReadMe.txt",
               "RelativeDocumentMoniker": "ScaffoldingReadMe.txt",

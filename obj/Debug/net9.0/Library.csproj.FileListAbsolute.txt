@@ -392,3 +392,4 @@ C:\Users\Julo\Desktop\WSEI\S3\ASP NET\Library\obj\Debug\net9.0\compressed\a3ygkw
 C:\Users\Julo\Desktop\WSEI\S3\ASP NET\Library\obj\Debug\net9.0\compressed\nezrqnk58p-muycvpuwrr.gz
 C:\Users\Julo\Desktop\WSEI\S3\ASP NET\Library\obj\Debug\net9.0\compressed\v0zgfp0y55-87fc7y1x7t.gz
 C:\Users\Julo\Desktop\WSEI\S3\ASP NET\Library\obj\Debug\net9.0\compressed\yfc7ypekbg-mlv21k5csn.gz
+C:\Users\Julo\Desktop\WSEI\S3\ASP NET\Library\obj\Debug\net9.0\Library.sourcelink.json
