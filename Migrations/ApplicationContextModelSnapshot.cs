@@ -99,6 +99,9 @@ namespace Library.Migrations
                         .IsRequired()
                         .HasColumnType("nvarchar(max)");
 
+                    b.Property<int>("GenreId")
+                        .HasColumnType("int");
+
                     b.Property<int>("LoanId")
                         .HasColumnType("int");
 
@@ -108,7 +111,26 @@ namespace Library.Migrations
 
                     b.HasKey("Id");
 
+                    b.HasIndex("GenreId");
+
                     b.ToTable("Book");
+                });
+
+            modelBuilder.Entity("Library.Models.Genre", b =>
+                {
+                    b.Property<int>("Id")
+                        .ValueGeneratedOnAdd()
+                        .HasColumnType("int");
+
+                    SqlServerPropertyBuilderExtensions.UseIdentityColumn(b.Property<int>("Id"));
+
+                    b.Property<string>("Name")
+                        .IsRequired()
+                        .HasColumnType("nvarchar(max)");
+
+                    b.HasKey("Id");
+
+                    b.ToTable("Genre");
                 });
 
             modelBuilder.Entity("Library.Models.Loan", b =>
@@ -277,6 +299,17 @@ namespace Library.Migrations
                     b.HasKey("UserId", "LoginProvider", "Name");
 
                     b.ToTable("AspNetUserTokens", (string)null);
+                });
+
+            modelBuilder.Entity("Library.Models.Book", b =>
+                {
+                    b.HasOne("Library.Models.Genre", "Genre")
+                        .WithMany()
+                        .HasForeignKey("GenreId")
+                        .OnDelete(DeleteBehavior.Cascade)
+                        .IsRequired();
+
+                    b.Navigation("Genre");
                 });
 
             modelBuilder.Entity("Library.Models.Loan", b =>

@@ -7,30 +7,25 @@ using Microsoft.AspNetCore.Mvc.Rendering;
 using Microsoft.EntityFrameworkCore;
 using Library.Data;
 using Library.Models;
-using Library.Areas.Identity.Data;
 
 namespace Library.Controllers
 {
-    public class LoansController : Controller
+    public class GenresController : Controller
     {
         private readonly ApplicationContext _context;
 
-        public LoansController(ApplicationContext context)
+        public GenresController(ApplicationContext context)
         {
             _context = context;
         }
 
-        // GET: Loans
+        // GET: Genres
         public async Task<IActionResult> Index()
         {
-            var applicationContext = _context.Loan
-                .Include(l => l.Book)
-                .Include(l => l.User);
-
-            return View(await applicationContext.ToListAsync());
+            return View(await _context.Genre.ToListAsync());
         }
 
-        // GET: Loans/Details/5
+        // GET: Genres/Details/5
         public async Task<IActionResult> Details(int? id)
         {
             if (id == null)
@@ -38,54 +33,39 @@ namespace Library.Controllers
                 return NotFound();
             }
 
-            var loan = await _context.Loan
-                .Include(l => l.Book)
-                .Include(l => l.User)
+            var genre = await _context.Genre
                 .FirstOrDefaultAsync(m => m.Id == id);
-            if (loan == null)
+            if (genre == null)
             {
                 return NotFound();
             }
 
-            return View(loan);
+            return View(genre);
         }
 
-        // GET: Loans/Create
+        // GET: Genres/Create
         public IActionResult Create()
         {
-            ViewData["BookId"] = new SelectList(_context.Book, "Id", "Title");
-            ViewData["UserId"] = new SelectList(_context.Users, "Id", "UserName");
             return View();
         }
 
-        // POST: Loans/Create
+        // POST: Genres/Create
         // To protect from overposting attacks, enable the specific properties you want to bind to.
         // For more details, see http://go.microsoft.com/fwlink/?LinkId=317598.
         [HttpPost]
         [ValidateAntiForgeryToken]
-        public async Task<IActionResult> Create([Bind("Id,BookId,UserId,LoanDate,ReturnDate")] Loan loan)
+        public async Task<IActionResult> Create([Bind("Id,Name")] Genre genre)
         {
-            //if (!ModelState.IsValid)
-            //{
-            //    foreach (var state in ModelState)
-            //    {
-            //        Console.WriteLine($"Key: {state.Key}, Errors: {string.Join(", ", state.Value.Errors.Select(e => e.ErrorMessage))}");
-            //    }
-            //}
-
             if (ModelState.IsValid)
             {
-                _context.Add(loan);
+                _context.Add(genre);
                 await _context.SaveChangesAsync();
                 return RedirectToAction(nameof(Index));
             }
-
-            ViewData["BookId"] = new SelectList(_context.Book, "Id", "Title");
-            ViewData["UserId"] = new SelectList(_context.Users, "Id", "UserName");
-            return View(loan);
+            return View(genre);
         }
 
-        // GET: Loans/Edit/5
+        // GET: Genres/Edit/5
         public async Task<IActionResult> Edit(int? id)
         {
             if (id == null)
@@ -93,24 +73,22 @@ namespace Library.Controllers
                 return NotFound();
             }
 
-            var loan = await _context.Loan.FindAsync(id);
-            if (loan == null)
+            var genre = await _context.Genre.FindAsync(id);
+            if (genre == null)
             {
                 return NotFound();
             }
-            ViewData["BookId"] = new SelectList(_context.Book, "Id", "Title", loan.BookId);
-            ViewData["UserId"] = new SelectList(_context.Users, "Id", "UserName", loan.UserId);
-            return View(loan);
+            return View(genre);
         }
 
-        // POST: Loans/Edit/5
+        // POST: Genres/Edit/5
         // To protect from overposting attacks, enable the specific properties you want to bind to.
         // For more details, see http://go.microsoft.com/fwlink/?LinkId=317598.
         [HttpPost]
         [ValidateAntiForgeryToken]
-        public async Task<IActionResult> Edit(int id, [Bind("Id,BookId,UserId,LoanDate,ReturnDate")] Loan loan)
+        public async Task<IActionResult> Edit(int id, [Bind("Id,Name,BookId")] Genre genre)
         {
-            if (id != loan.Id)
+            if (id != genre.Id)
             {
                 return NotFound();
             }
@@ -119,12 +97,12 @@ namespace Library.Controllers
             {
                 try
                 {
-                    _context.Update(loan);
+                    _context.Update(genre);
                     await _context.SaveChangesAsync();
                 }
                 catch (DbUpdateConcurrencyException)
                 {
-                    if (!LoanExists(loan.Id))
+                    if (!GenreExists(genre.Id))
                     {
                         return NotFound();
                     }
@@ -135,12 +113,10 @@ namespace Library.Controllers
                 }
                 return RedirectToAction(nameof(Index));
             }
-            ViewData["BookId"] = new SelectList(_context.Book, "Id", "Id", loan.BookId);
-            ViewData["UserId"] = new SelectList(_context.Users, "Id", "Id", loan.UserId);
-            return View(loan);
+            return View(genre);
         }
 
-        // GET: Loans/Delete/5
+        // GET: Genres/Delete/5
         public async Task<IActionResult> Delete(int? id)
         {
             if (id == null)
@@ -148,36 +124,34 @@ namespace Library.Controllers
                 return NotFound();
             }
 
-            var loan = await _context.Loan
-                .Include(l => l.Book)
-                .Include(l => l.User)
+            var genre = await _context.Genre
                 .FirstOrDefaultAsync(m => m.Id == id);
-            if (loan == null)
+            if (genre == null)
             {
                 return NotFound();
             }
 
-            return View(loan);
+            return View(genre);
         }
 
-        // POST: Loans/Delete/5
+        // POST: Genres/Delete/5
         [HttpPost, ActionName("Delete")]
         [ValidateAntiForgeryToken]
         public async Task<IActionResult> DeleteConfirmed(int id)
         {
-            var loan = await _context.Loan.FindAsync(id);
-            if (loan != null)
+            var genre = await _context.Genre.FindAsync(id);
+            if (genre != null)
             {
-                _context.Loan.Remove(loan);
+                _context.Genre.Remove(genre);
             }
 
             await _context.SaveChangesAsync();
             return RedirectToAction(nameof(Index));
         }
 
-        private bool LoanExists(int id)
+        private bool GenreExists(int id)
         {
-            return _context.Loan.Any(e => e.Id == id);
+            return _context.Genre.Any(e => e.Id == id);
         }
     }
 }

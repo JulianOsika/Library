@@ -22,17 +22,22 @@ public class ApplicationContext : IdentityDbContext<User>
         builder.Entity<Loan>()
             .HasOne(l => l.Book)
             .WithOne(b => b.Loan)
-            .HasForeignKey<Loan>(l => l.BookId); // Opcjonalnie: definiowanie zachowania przy usuwaniu
+            .HasForeignKey<Loan>(l => l.BookId);
 
         // Konfiguracja dla Loan -> User (Many-to-One)
         builder.Entity<Loan>()
             .HasOne(l => l.User)
             .WithMany(u => u.Loans)
             .HasForeignKey(l => l.UserId);
+
+        builder.Entity<Book>()
+            .HasOne(b => b.Genre);
     }
     
 
     public DbSet<Library.Models.Book> Book { get; set; } = default!;
 
     public DbSet<Library.Models.Loan> Loan { get; set; } = default!;
+
+public DbSet<Library.Models.Genre> Genre { get; set; } = default!;
 }

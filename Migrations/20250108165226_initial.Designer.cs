@@ -12,8 +12,8 @@ using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
 namespace Library.Migrations
 {
     [DbContext(typeof(ApplicationContext))]
-    [Migration("20250107142853_addLoan")]
-    partial class addLoan
+    [Migration("20250108165226_initial")]
+    partial class initial
     {
         /// <inheritdoc />
         protected override void BuildTargetModel(ModelBuilder modelBuilder)
@@ -102,8 +102,11 @@ namespace Library.Migrations
                         .IsRequired()
                         .HasColumnType("nvarchar(max)");
 
-                    b.Property<bool>("IsAvailable")
-                        .HasColumnType("bit");
+                    b.Property<int>("GenreId")
+                        .HasColumnType("int");
+
+                    b.Property<int>("LoanId")
+                        .HasColumnType("int");
 
                     b.Property<string>("Title")
                         .IsRequired()
@@ -111,7 +114,26 @@ namespace Library.Migrations
 
                     b.HasKey("Id");
 
+                    b.HasIndex("GenreId");
+
                     b.ToTable("Book");
+                });
+
+            modelBuilder.Entity("Library.Models.Genre", b =>
+                {
+                    b.Property<int>("Id")
+                        .ValueGeneratedOnAdd()
+                        .HasColumnType("int");
+
+                    SqlServerPropertyBuilderExtensions.UseIdentityColumn(b.Property<int>("Id"));
+
+                    b.Property<string>("Name")
+                        .IsRequired()
+                        .HasColumnType("nvarchar(max)");
+
+                    b.HasKey("Id");
+
+                    b.ToTable("Genre");
                 });
 
             modelBuilder.Entity("Library.Models.Loan", b =>
@@ -137,7 +159,8 @@ namespace Library.Migrations
 
                     b.HasKey("Id");
 
-                    b.HasIndex("BookId");
+                    b.HasIndex("BookId")
+                        .IsUnique();
 
                     b.HasIndex("UserId");
 
@@ -281,16 +304,27 @@ namespace Library.Migrations
                     b.ToTable("AspNetUserTokens", (string)null);
                 });
 
+            modelBuilder.Entity("Library.Models.Book", b =>
+                {
+                    b.HasOne("Library.Models.Genre", "Genre")
+                        .WithMany("Books")
+                        .HasForeignKey("GenreId")
+                        .OnDelete(DeleteBehavior.Restrict)
+                        .IsRequired();
+
+                    b.Navigation("Genre");
+                });
+
             modelBuilder.Entity("Library.Models.Loan", b =>
                 {
                     b.HasOne("Library.Models.Book", "Book")
-                        .WithMany()
-                        .HasForeignKey("BookId")
+                        .WithOne("Loan")
+                        .HasForeignKey("Library.Models.Loan", "BookId")
                         .OnDelete(DeleteBehavior.Cascade)
                         .IsRequired();
 
                     b.HasOne("Library.Areas.Identity.Data.User", "User")
-                        .WithMany()
+                        .WithMany("Loans")
                         .HasForeignKey("UserId")
                         .OnDelete(DeleteBehavior.Cascade)
                         .IsRequired();
@@ -349,6 +383,21 @@ namespace Library.Migrations
                         .HasForeignKey("UserId")
                         .OnDelete(DeleteBehavior.Cascade)
                         .IsRequired();
+                });
+
+            modelBuilder.Entity("Library.Areas.Identity.Data.User", b =>
+                {
+                    b.Navigation("Loans");
+                });
+
+            modelBuilder.Entity("Library.Models.Book", b =>
+                {
+                    b.Navigation("Loan");
+                });
+
+            modelBuilder.Entity("Library.Models.Genre", b =>
+                {
+                    b.Navigation("Books");
                 });
 #pragma warning restore 612, 618
         }

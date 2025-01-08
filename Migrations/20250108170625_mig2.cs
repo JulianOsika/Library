@@ -5,7 +5,7 @@
 namespace Library.Migrations
 {
     /// <inheritdoc />
-    public partial class loan : Migration
+    public partial class mig2 : Migration
     {
         /// <inheritdoc />
         protected override void Up(MigrationBuilder migrationBuilder)

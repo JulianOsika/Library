@@ -22,7 +22,9 @@ namespace Library.Controllers
         // GET: Books
         public async Task<IActionResult> Index()
         {
-            return View(await _context.Book.ToListAsync());
+            return View(await _context.Book
+                .Include(b => b.Genre)
+                .ToListAsync());
         }
 
         // GET: Books/Details/5
@@ -34,6 +36,7 @@ namespace Library.Controllers
             }
 
             var book = await _context.Book
+                .Include(b => b.Genre)
                 .FirstOrDefaultAsync(m => m.Id == id);
             if (book == null)
             {
@@ -46,6 +49,7 @@ namespace Library.Controllers
         // GET: Books/Create
         public IActionResult Create()
         {
+            ViewData["Genre"] = new SelectList(_context.Genre, "Id", "Name");
             return View();
         }
 
@@ -54,7 +58,7 @@ namespace Library.Controllers
         // For more details, see http://go.microsoft.com/fwlink/?LinkId=317598.
         [HttpPost]
         [ValidateAntiForgeryToken]
-        public async Task<IActionResult> Create([Bind("Id,Title,Author,IsAvailable")] Book book)
+        public async Task<IActionResult> Create([Bind("Id,Title,Author,GenreId")] Book book)
         {
             if (ModelState.IsValid)
             {
@@ -68,6 +72,7 @@ namespace Library.Controllers
         // GET: Books/Edit/5
         public async Task<IActionResult> Edit(int? id)
         {
+            ViewData["Genre"] = new SelectList(_context.Genre, "Id", "Name");
             if (id == null)
             {
                 return NotFound();
@@ -86,7 +91,7 @@ namespace Library.Controllers
         // For more details, see http://go.microsoft.com/fwlink/?LinkId=317598.
         [HttpPost]
         [ValidateAntiForgeryToken]
-        public async Task<IActionResult> Edit(int id, [Bind("Id,Title,Author,IsAvailable")] Book book)
+        public async Task<IActionResult> Edit(int id, [Bind("Id,Title,Author,GenreId")] Book book)
         {
             if (id != book.Id)
             {
