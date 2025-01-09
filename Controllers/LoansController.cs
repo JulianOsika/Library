@@ -8,9 +8,11 @@ using Microsoft.EntityFrameworkCore;
 using Library.Data;
 using Library.Models;
 using Library.Areas.Identity.Data;
+using Microsoft.AspNetCore.Authorization;
 
 namespace Library.Controllers
 {
+    [Authorize(Roles = "Admin")]
     public class LoansController : Controller
     {
         private readonly ApplicationContext _context;

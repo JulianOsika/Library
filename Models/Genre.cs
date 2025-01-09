@@ -6,7 +6,8 @@ namespace Library.Models
     {
         public int Id { get; set; }
 
-        [Required]
+        [Required(ErrorMessage = "Nazwa gatunku jest obowiązkowa")]
+        [Length(1, 50)]
         public string Name { get; set; }
     }
 }

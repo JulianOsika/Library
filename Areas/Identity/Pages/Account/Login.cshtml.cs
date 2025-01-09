@@ -21,11 +21,13 @@ namespace Library.Areas.Identity.Pages.Account
     public class LoginModel : PageModel
     {
         private readonly SignInManager<User> _signInManager;
+        private readonly UserManager<User> _userManager;
         private readonly ILogger<LoginModel> _logger;
 
-        public LoginModel(SignInManager<User> signInManager, ILogger<LoginModel> logger)
+        public LoginModel(SignInManager<User> signInManager, UserManager<User> userManager, ILogger<LoginModel> logger)
         {
             _signInManager = signInManager;
+            _userManager = userManager;
             _logger = logger;
         }
 
@@ -104,9 +106,24 @@ namespace Library.Areas.Identity.Pages.Account
 
         public async Task<IActionResult> OnPostAsync(string returnUrl = null)
         {
+
             returnUrl ??= Url.Content("~/");
 
             ExternalLogins = (await _signInManager.GetExternalAuthenticationSchemesAsync()).ToList();
+
+            var user = await _userManager.FindByEmailAsync(Input.Email);
+            if (user == null)
+            {
+                ModelState.AddModelError(string.Empty, "Nie znaleziono użytkownika o podanym adresie e-mail.");
+                return Page();
+            }
+
+            var passwordValid = await _userManager.CheckPasswordAsync(user, Input.Password);
+            if (!passwordValid)
+            {
+                ModelState.AddModelError(string.Empty, "Podane hasło jest niepoprawne.");
+                return Page();
+            }
 
             if (ModelState.IsValid)
             {

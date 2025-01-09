@@ -36,8 +36,7 @@ public class ApplicationContext : IdentityDbContext<User>
     
 
     public DbSet<Library.Models.Book> Book { get; set; } = default!;
-
     public DbSet<Library.Models.Loan> Loan { get; set; } = default!;
+    public DbSet<Library.Models.Genre> Genre { get; set; } = default!;
 
-public DbSet<Library.Models.Genre> Genre { get; set; } = default!;
 }
