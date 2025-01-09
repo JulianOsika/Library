@@ -53,7 +53,10 @@ namespace Library.Controllers
         // GET: Loans/Create
         public IActionResult Create()
         {
-            ViewData["BookId"] = new SelectList(_context.Book, "Id", "Title");
+            var loanedBookIds = _context.Loan.Select(l => l.BookId).ToList();
+            var availableBooks = _context.Book.Where(b => !loanedBookIds.Contains(b.Id)).ToList();
+
+            ViewData["BookId"] = new SelectList(availableBooks, "Id", "Title");
             ViewData["UserId"] = new SelectList(_context.Users, "Id", "UserName");
             return View();
         }
@@ -98,7 +101,11 @@ namespace Library.Controllers
             {
                 return NotFound();
             }
-            ViewData["BookId"] = new SelectList(_context.Book, "Id", "Title", loan.BookId);
+
+            var loanedBookIds = _context.Loan.Select(l => l.BookId).ToList();
+            var availableBooks = _context.Book.Where(b => !loanedBookIds.Contains(b.Id) || b.Id == loan.BookId).ToList();
+
+            ViewData["BookId"] = new SelectList(availableBooks, "Id", "Title", loan.BookId);
             ViewData["UserId"] = new SelectList(_context.Users, "Id", "UserName", loan.UserId);
             return View(loan);
         }
@@ -135,7 +142,11 @@ namespace Library.Controllers
                 }
                 return RedirectToAction(nameof(Index));
             }
-            ViewData["BookId"] = new SelectList(_context.Book, "Id", "Id", loan.BookId);
+
+            var loanedBookIds = _context.Loan.Select(l => l.BookId).ToList();
+            var availableBooks = _context.Book.Where(b => !loanedBookIds.Contains(b.Id) || b.Id == loan.BookId).ToList();
+
+            ViewData["BookId"] = new SelectList(availableBooks, "Id", "Title", loan.BookId);
             ViewData["UserId"] = new SelectList(_context.Users, "Id", "Id", loan.UserId);
             return View(loan);
         }
